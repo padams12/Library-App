@@ -33,3 +33,11 @@ function displayLibraryCollection() {
     }
 
 }
+
+const addNewBookByPromptButton = document.querySelector(".newBookPrompt"); //Select button for "Add New Book by Prompt".
+addNewBookByPromptButton.addEventListener("click", () => {
+
+    addBookToLibrary();
+
+
+}); //If the user clicks the button, run the prompts to allow them to add a new book.
