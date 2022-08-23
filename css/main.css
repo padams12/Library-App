@@ -4,3 +4,13 @@
     color: rgb(255, 243, 228);
 
 }
+
+.libraryDisplayResults {
+
+    border: 12px solid yellow;
+}
+
+.newBook {
+
+    border: 12px solid blue;
+}

@@ -45,16 +45,19 @@ addNewBookByPromptButton.addEventListener("click", () => {
 }); //If the user clicks the button, run the prompts to allow them to add a new book.
 
 const displayLibraryCollectionButton = document.querySelector(".displayLibraryCollection"); //Select button for displaying library collection.
-displayLibraryCollection.addEventListener("click", () => {
+displayLibraryCollectionButton.addEventListener("click", () => {
 
     
     for (i=0; i < myLibrary.length; i++) {
 
+
+        let parentDiv = document.querySelector(".libraryDisplayResults"); //Select parent div.
         let book = myLibrary[i]; //Set book equal to current array item (Book object).
         let title = book.title; //Set title.
         let author = book.author; //Set author.
         let pages = book.pages; //Set pages.
         let div = document.createElement("div"); //Create new Div for book result.
+        div.classList.add("newBook");
         let p1Title = document.createElement("p"); //Create p tag for book title.
         let p2Author = document.createElement("p"); //Create p tag for book author.
         let p3Pages = document.createElement("p"); //Create p tag for book pages.
@@ -64,8 +67,8 @@ displayLibraryCollection.addEventListener("click", () => {
         div.appendChild(p1Title); //Append p tag to div.
         div.appendChild(p2Author); //Append p tag to div.
         div.appendChild(p3Pages); //Append p tag to div.
+        parentDiv.appendChild(div); //Append new div to existing parent div to display results.
 
-        
     }
 
 })
