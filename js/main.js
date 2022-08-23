@@ -34,6 +34,8 @@ function displayLibraryCollection() {
 
 }
 
+//Element selector collection.
+
 const addNewBookByPromptButton = document.querySelector(".newBookPrompt"); //Select button for "Add New Book by Prompt".
 addNewBookByPromptButton.addEventListener("click", () => {
 
@@ -42,3 +44,28 @@ addNewBookByPromptButton.addEventListener("click", () => {
 
 }); //If the user clicks the button, run the prompts to allow them to add a new book.
 
+const displayLibraryCollectionButton = document.querySelector(".displayLibraryCollection"); //Select button for displaying library collection.
+displayLibraryCollection.addEventListener("click", () => {
+
+    
+    for (i=0; i < myLibrary.length; i++) {
+
+        let book = myLibrary[i]; //Set book equal to current array item (Book object).
+        let title = book.title; //Set title.
+        let author = book.author; //Set author.
+        let pages = book.pages; //Set pages.
+        let div = document.createElement("div"); //Create new Div for book result.
+        let p1Title = document.createElement("p"); //Create p tag for book title.
+        let p2Author = document.createElement("p"); //Create p tag for book author.
+        let p3Pages = document.createElement("p"); //Create p tag for book pages.
+        p1Title.textContent = title; //Set title to p tag.
+        p2Author.textContent = author; //Set author to p tag.
+        p3Pages.textContent = pages; //Set pages to p tag.
+        div.appendChild(p1Title); //Append p tag to div.
+        div.appendChild(p2Author); //Append p tag to div.
+        div.appendChild(p3Pages); //Append p tag to div.
+
+        
+    }
+
+})
