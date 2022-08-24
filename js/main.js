@@ -50,15 +50,13 @@ displayLibraryCollectionButton.addEventListener("click", () => {
 
     let parentDiv = document.querySelector(".libraryDisplayResults"); //Select parent div.
 
-    for (i = 0; i < itemsOnPage; i++){
+    const newBooks = document.querySelectorAll(".newBook"); //Select all books in library collection.
+    newBooks.forEach(newBook =>{
 
-        parentDiv.removeChild("newBook"); //Remove all display results when button is pressed. This prevents duplicate results from displaying.
-
-        
+        newBook.remove(); //Remove previous results so that when user presses button again, duplicate results are not displayed.
 
 
-    }
-
+    })
     
     for (i=0; i < myLibrary.length; i++) {
 
