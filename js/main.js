@@ -1,4 +1,5 @@
 let myLibrary = []; //Array stores all book objects.
+itemsOnPage = 0; //Keeps track of items displayed in library collection.
 
 function Book(title, author, pages){
 
@@ -45,13 +46,22 @@ addNewBookByPromptButton.addEventListener("click", () => {
 }); //If the user clicks the button, run the prompts to allow them to add a new book.
 
 const displayLibraryCollectionButton = document.querySelector(".displayLibraryCollection"); //Select button for displaying library collection.
-displayLibraryCollectionButton.addEventListener("click", () => {
+displayLibraryCollectionButton.addEventListener("click", () => { 
+
+    let parentDiv = document.querySelector(".libraryDisplayResults"); //Select parent div.
+
+    for (i = 0; i < itemsOnPage; i++){
+
+        parentDiv.removeChild("newBook"); //Remove all display results when button is pressed. This prevents duplicate results from displaying.
+
+        
+
+
+    }
 
     
     for (i=0; i < myLibrary.length; i++) {
 
-
-        let parentDiv = document.querySelector(".libraryDisplayResults"); //Select parent div.
         let book = myLibrary[i]; //Set book equal to current array item (Book object).
         let title = book.title; //Set title.
         let author = book.author; //Set author.
@@ -68,6 +78,7 @@ displayLibraryCollectionButton.addEventListener("click", () => {
         div.appendChild(p2Author); //Append p tag to div.
         div.appendChild(p3Pages); //Append p tag to div.
         parentDiv.appendChild(div); //Append new div to existing parent div to display results.
+        itemsOnPage +=1; //Increment counter.
 
     }
 
