@@ -66,6 +66,8 @@ displayLibraryCollectionButton.addEventListener("click", () => {
         let pages = book.pages; //Set pages.
         let div = document.createElement("div"); //Create new Div for book result.
         div.classList.add("newBook");
+        let bookImage = document.createElement("img"); //Create img element for image icon.
+        bookImage.src = "./img/book.svg"; //Set image SRC attribute.
         let p1Title = document.createElement("p"); //Create p tag for book title.
         let p2Author = document.createElement("p"); //Create p tag for book author.
         let p3Pages = document.createElement("p"); //Create p tag for book pages.
@@ -75,6 +77,7 @@ displayLibraryCollectionButton.addEventListener("click", () => {
         div.appendChild(p1Title); //Append p tag to div.
         div.appendChild(p2Author); //Append p tag to div.
         div.appendChild(p3Pages); //Append p tag to div.
+        div.appendChild(bookImage); //Append book image to div.
         parentDiv.appendChild(div); //Append new div to existing parent div to display results.
         itemsOnPage +=1; //Increment counter.
 
