@@ -5,12 +5,10 @@
 
 }
 
-.libraryDisplayResults {
-
-    border: 12px solid yellow;
-}
-
 .newBook {
 
-    border: 12px solid blue;
+    border: 12px solid rgb(97, 97, 109);
+    border-radius: 15px;
+    height: auto;
+    width: 130px;
 }
