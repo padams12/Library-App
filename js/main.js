@@ -84,3 +84,19 @@ displayLibraryCollectionButton.addEventListener("click", () => {
     }
 
 })
+
+function clearLibraryDisplayResults() {
+
+    const parentDiv = document.querySelector(".libraryDisplayResults"); //Select parent div.
+    parentDiv.textContent = ""; //Clear all display results.
+
+}
+
+
+const clearButton = document.querySelector("#clearLibraryCollectionResults");
+
+clearButton.addEventListener("click", () => {
+
+    clearLibraryDisplayResults();
+
+ })
