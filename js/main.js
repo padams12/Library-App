@@ -105,7 +105,43 @@ clearButton.addEventListener("click", () => {
  function addNewBookByForm() {
 
     let newBookForm = document.createElement("form"); //Form for book details to be entered.
-    newBookForm.setAttribute("class" , "newBookForm")
+    newBookForm.setAttribute("class" , "newBookForm");
+
+    //Create Title Input and Label.
+    let newBookFormInputTitle = document.createElement("input"); //Input for form that will contain new book information.
+    let newbookTitleLabel = document.createElement("label"); //Label for title of book field.
+    newbookTitleLabel.textContent = "Title:";
+    newbookTitleLabel.setAttribute("for", "title");
+    newBookFormInputTitle.setAttribute("type" , "text");
+    newBookFormInputTitle.setAttribute("id", "title");
+    newBookFormInputTitle.setAttribute("value" , "");
+    newBookForm.appendChild(newbookTitleLabel);
+    newBookForm.appendChild(newBookFormInputTitle);
+    newBookFormParentDiv.appendChild(newBookForm);
+
+    //Create Author Input and Label.
+    let newBookFormInputAuthor = document.createElement("input"); //Input for form that will contain new book information.
+    let newbookAuthorLabel = document.createElement("label"); //Label for title of book field.
+    newbookAuthorLabel.textContent = "Author:";
+    newbookAuthorLabel.setAttribute("for", "author");
+    newBookFormInputAuthor.setAttribute("type" , "text");
+    newBookFormInputAuthor.setAttribute("id", "author");
+    newBookFormInputAuthor.setAttribute("value" , "");
+    newBookForm.appendChild(newbookAuthorLabel);
+    newBookForm.appendChild(newBookFormInputAuthor);
+    newBookFormParentDiv.appendChild(newBookForm);
+
+
+    //Create Pages Input and Label.
+    let newBookFormInputPages = document.createElement("input"); //Input for form that will contain new book information.
+    let newbookPagesLabel = document.createElement("label"); //Label for title of book field.
+    newbookPagesLabel.textContent = "Pages:";
+    newbookPagesLabel.setAttribute("for", "pages");
+    newBookFormInputPages.setAttribute("type" , "text");
+    newBookFormInputPages.setAttribute("id", "pages");
+    newBookFormInputPages.setAttribute("value" , "");
+    newBookForm.appendChild(newbookPagesLabel);
+    newBookForm.appendChild(newBookFormInputPages);
     newBookFormParentDiv.appendChild(newBookForm);
 
  }
