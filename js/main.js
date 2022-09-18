@@ -100,3 +100,18 @@ clearButton.addEventListener("click", () => {
     clearLibraryDisplayResults();
 
  })
+
+ function addNewBookByForm() {
+
+
+ }
+
+
+
+ const addNewBookByFormButton = document.querySelector("#addNewBookByForm"); //This button will allow users to add new book via a form.
+ addNewBookByFormButton.addEventListener("click", () => {
+
+    addNewBookByForm();
+
+ })
+ 
