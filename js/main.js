@@ -105,13 +105,12 @@ clearButton.addEventListener("click", () => {
  function addNewBookByForm() {
 
     let newBookForm = document.createElement("form"); //Form for book details to be entered.
-    
-
-
+    newBookForm.setAttribute("class" , "newBookForm")
+    newBookFormParentDiv.appendChild(newBookForm);
 
  }
 
-
+ let newBookFormParentDiv = document.querySelector(".newBookForms"); //Parent div that holds the new book form.
  const addNewBookByFormButton = document.querySelector("#addNewBookByForm"); //This button will allow users to add a new book via a form.
  addNewBookByFormButton.addEventListener("click", () => {
 
